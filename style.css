@@ -63,6 +63,7 @@ body{
 @media(max-width:768px){
     .navbar{
         justify-content: center;
+        width: 100%;
     }
     .navbar>*:not(.logo){
         display: none;
@@ -329,6 +330,9 @@ footer a:hover{
     transform: scale(1.1);
 }
 @media(max-width:768px){
+    footer{
+        width: 100%;
+    }
     footer a{
         font-size: 28px;
     }
