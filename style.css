@@ -60,17 +60,6 @@ body{
     transform: scale(1.08);
 }
 
-@media(max-width:768px){
-    .navbar{
-        justify-content: center;
-        width: 100%;
-    }
-    .navbar>*:not(.logo){
-        display: none;
-    }
-
-}
-
 
 .hero{
     position: relative;
@@ -121,22 +110,6 @@ body{
     transform:  translateY(-3px);
 }
 
-@media(max-width:375px){
-    .hero{
-        padding: 0 25px;
-        text-align: left;
-    }
-    .main h1{
-        font-size: 1rem;
-    }
-    .main p{
-        font-size: 1rem;
-    }
-    .btn{
-        padding: 5px 15px;
-    }
-}
-
 
 .our-products{
     width: 70%;
@@ -150,13 +123,15 @@ body{
 .coffee{
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    justify-content: center;
     gap: 25px;
     background-color:#efebe9;
     padding: 20px 8px;
 }
 .coffee .coffee-card{
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     height: 480px;
     position: relative;
     overflow: hidden;
@@ -205,21 +180,7 @@ body{
     color: #4e342e;
     transform: scale(0.5);
 }
-@media(max-width:375px){
-    .coffee-card{
-        padding: 0 55px;
-        text-align: left;
-    }
-    .discription h3{
-        font-size: 3rem;
-    }
-    .discription h4{
-        font-size: 1rem;
-    }
-    .discription a{
-        padding: 10px 20px;
-    }
-}
+
 
 
 .drinkes{
@@ -231,7 +192,8 @@ body{
     padding: 20px 8px;
 }
 .drinkes .drink-card{
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     height: 380px;
     border-radius: 25px;
     border: 1px solid #c49a6c;
@@ -262,21 +224,7 @@ body{
     font-weight: bold;
     margin-bottom: 15px;
 }
-@media(max-width:768px){
-    .drinkes{
-        padding: 0 55px;
-        text-align: left;
-    }
-    .discription h3{
-        font-size: 3rem;
-    }
-    .discription h4{
-        font-size: 1rem;
-    }
-    .discription a{
-        padding: 10px 20px;
-    }
-}
+
 
 
 .hot-drinks{
@@ -301,21 +249,7 @@ body{
 .hot-drinks .drink-card:hover{
     transform: scale(1.08);
 }
-@media(max-width:768px){
-    .hot-drinks{
-        padding: 0 55px;
-        text-align: left;
-    }
-    .discription h3{
-        font-size: 3rem;
-    }
-    .discription h4{
-        font-size: 1rem;
-    }
-    .discription a{
-        padding: 10px 20px;
-    }
-}
+
 footer{
     width: 100%;
     height: 100px;
@@ -344,17 +278,7 @@ footer a:hover{
     color: #d7ccc8;
     transform: scale(1.1);
 }
-@media(max-width:768px){
-    footer{
-        width: 100%;
-    }
-    footer a{
-        font-size: 28px;
-    }
-    footer p{
-        font-size: 14px;
-    }
-}
+
 
 
 .order-popup{
@@ -371,11 +295,11 @@ footer a:hover{
 }
 
 .popup-content{
-    width: 420px;
-    max-width: 95%;
+    width: 100%;
+    max-width: 380px;
     background: #efebe9;
-    border-radius: 20px;
-    padding: 30px;
+    border-radius: 16px;
+    padding: 20px;
     position: relative;
     box-shadow: 0 10px 30px rgba(0,0,0,.3);
     animation: popup .35s ease;
@@ -406,20 +330,21 @@ footer a:hover{
 
 .popup-content h2{
     text-align:center;
-    margin-bottom:20px;
+    margin-bottom:15px;
     color:#4e342e;
+    font-size: 24px;
 }
 
 .popup-content input,
 .popup-content select{
 
     width:100%;
-    padding:12px;
-    margin:10px 0;
+    padding: 10px;
+    margin:8px 0;
     border:1px solid #c49a6c;
     border-radius:10px;
     outline:none;
-    font-size:16px;
+    font-size:15px;
     font-family:'Cairo',sans-serif;
 
 }
@@ -434,15 +359,15 @@ footer a:hover{
 .invoice{
 
     background:#d7ccc8;
-    padding:15px;
-    margin-top:20px;
+    padding:12px;
+    margin-top:15px;
     border-radius:12px;
 
 }
 
 .invoice h3{
 
-    margin-bottom:10px;
+    margin-bottom:8px;
     color:#4e342e;
 
 }
@@ -451,7 +376,7 @@ footer a:hover{
 
     display:flex;
     justify-content:space-between;
-    margin:8px 0;
+    margin:5px 0;
     font-size:17px;
 
 }
@@ -459,13 +384,13 @@ footer a:hover{
 .popup-content button{
 
     width:100%;
-    padding:15px;
-    margin-top:20px;
+    padding:12px;
+    margin-top:15px;
     border:none;
     border-radius:12px;
     background:#4e342e;
     color:#efebe9;
-    font-size:18px;
+    font-size:16px;
     cursor:pointer;
     transition:.3s;
 
@@ -481,10 +406,180 @@ footer a:hover{
 @media(max-width:768px){
 
     .popup-content{
-
-        width:92%;
+        width: 95%;
         padding:20px;
+    }
+}
+@media(max-width:992px){
+    .popup-content{
+        max-width: 360px;
+    }
+}
 
+
+/* ===================== Responsive ===================== */
+
+@media (max-width:768px){
+
+    body{
+        overflow-x:hidden;
+    }
+
+    /* Navbar */
+
+    .navbar{
+        justify-content:center;
+        padding:15px;
+    }
+
+    .navbar .links{
+        display:none;
+    }
+
+    .navbar .logo a{
+        font-size:38px;
+    }
+
+    /* Hero */
+
+    .hero{
+        height:80vh;
+        justify-content:center;
+        text-align:center;
+        padding:20px;
+        background-position:center;
+    }
+
+    .hero .main{
+        max-width:100%;
+        margin-top: 50px;
+    }
+
+    .hero .main h1{
+        font-size:2.5rem;
+        color: #c49a6c;
+        text-shadow: 2px 2px 8px rgba(255, 255, 255, .35);
+    }
+
+    .hero .main p{
+        font-size:1.1rem;
+        margin:20px 0;
+    }
+
+    .hero .main .btn{
+        font-size:1rem;
+        padding:12px 24px;
+        margin:0;
+    }
+
+    /* Section Title */
+
+    .our-products{
+        width:90%;
+        margin:25px auto;
+    }
+
+    /* Coffee */
+
+    .coffee{
+        grid-template-columns:1fr;
+        justify-items:center;
+        padding:20px;
+    }
+
+    .coffee .coffee-card{
+        width:100%;
+        max-width:350px;
+        height:auto;
+    }
+
+    .coffee-card img{
+        height:260px;
+    }
+
+    /* Hot Drinks */
+
+    .drinkes{
+        grid-template-columns:1fr;
+        justify-items:center;
+        padding:20px;
+    }
+
+    .drinkes .drink-card{
+        width:100%;
+        max-width:320px;
+        height:auto;
+    }
+
+    /* Cold Drinks */
+
+    .hot-drinks{
+        grid-template-columns:1fr;
+        justify-items:center;
+        padding:20px;
+    }
+
+    .hot-drinks .drink-card{
+        width:100%;
+        max-width:320px;
+        height:auto;
+    }
+
+    .drink-card img{
+        height:220px;
+    }
+
+    .discription{
+        padding:18px;
+    }
+
+    .discription h3{
+        font-size:20px;
+    }
+
+    .discription p{
+        font-size:15px;
+    }
+
+    .discription h4{
+        font-size:20px;
+    }
+
+    .discription a{
+        display:inline-block;
+        margin-top:15px;
+    }
+
+    /* Footer */
+
+    footer{
+        padding:20px;
+        height:auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+    .icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        width: 100%;
+    }
+    .icon a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        text-decoration: none;
+    }
+
+    footer p{
+        text-align: center;
+        font-size:16px;
     }
 
 }
